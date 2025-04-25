@@ -1,35 +1,187 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KAGEMINORI</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kageminori</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #e6eef8;
+      color: #2c3e50;
+    }
+
+    .links {
+      margin-top: 50px;
+      display: flex;
+      gap: 50px;
+      opacity: 0;
+      animation: iconsIn 0.7s ease-out forwards;
+      animation-delay: 0.7s;
+    }
+
+    .latexlinks a {
+      color: #2c3e50; 
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .latexlinks a:hover {
+      color: #5ba4a4;
+      transform: scale(2);
+    }
+
+    .links a {
+      color: #2c3e50;
+      font-size: 2rem;
+      text-decoration: none;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .links a:hover {
+      color: #5ba4a4;
+      transform: scale(2);
+    }
+
+    .svg-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        filter: blur(20px);
+      }
+      50% {
+        opacity: 0;
+        filter: blur(20px);
+      }
+      100% {
+        opacity: 1;
+        filter: none;
+      }
+    }
+
+    @keyframes iconsIn {
+      0% {
+        transform: translateY(75%);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(75%);
+        opacity: 0;
+      }
+      100% {
+        transform: none;
+        opacity: 1;
+      }
+    }
+
+    .soundcloud-player {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 190px;
+      background: white;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+      border-top: 1px solid #eee;
+  }
+  
+  .player-container {
+      width: 100%;
+      max-width: 2300px;
+      margin: 0 auto;
+  }
+  
+  iframe {
+      width: 100%;
+      height: 190px;
+      border: none;
+  }
+  
+  /* Адаптация для мобильных */
+  @media (max-width: 768px) {
+      .soundcloud-player {
+          height: 120px;
+      }
+      iframe {
+          height: 120px;
+      }
+      body {
+          padding-bottom: 140px;
+      }
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2px;
+}
+  </style>
 </head>
 <body>
-    <div class="card">
-        <div class="glitch" data-text="KAGEMINORI">KAGEMINORI</div>
-        <div class="genre-bar">
-            <span>HARDCORE</span>
-            <span>FRENCHCORE</span>
-            <span>DUBSTEP</span>
-            <span>NEUROFUNK</span>
-            <span>DRUM AND BASS</span>
-        </div>
-        
-        <div class="social-links">
-            <a href="https://soundcloud.com/kageminori" target="_blank">SOUNDCLOUD</a>
-            <a href="https://kageminori.bandcamp.com/" target="_blank">BANDCAMP</a>
-            <a href="https://open.spotify.com/artist/04sCWKrpBHiJNcOthQEstz" target="_blank">SPOTIFY</a>
-        </div>
-        
-        <!-- SoundCloud плеер -->
-        <div class="player">
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1322664625&color=%23ffffff&auto_play=false"></iframe>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+
+<div class="soundcloud-player">
+  <div class="player-container">
+    <h1>Most popular SoundCloud upload</h1>
+      <iframe 
+          scrolling="no" 
+          frameborder="no" 
+          allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1322664625&color=%23ff5500">
+      </iframe>
+  </div>
+</div>
+
+<div class="auth-box">
+    <?php if (isset($_SESSION['osu_user'])): ?>
+        <img src="<?= $_SESSION['osu_user']['avatar'] ?>" width="40" height="40">
+        <span><?= $_SESSION['osu_user']['username'] ?></span>
+        <a href="/logout.php">Выйти</a>
+    <?php else: ?>
+        <a href="/osu-auth.php" class="osu-login-btn">
+            <img src="https://osu.ppy.sh/images/layout/logo-osu.png" width="20">
+            Войти через osu!
+        </a>
+    <?php endif; ?>
+</div>
+
+  <div class="links">
+    <a href="https://x.com/kageminori" target="_blank" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://soundcloud.com/kageminori" target="_blank" aria-label="SoundCloud">
+      <i class="fab fa-soundcloud"></i>
+    </a>
+    <a href="https://open.spotify.com/artist/04sCWKrpBHiJNcOthQEstz" target="_blank" aria-label="Spotify">
+      <i class="fab fa-spotify"></i>
+    </a>
+    <a href="https://github.com/kageminori" target="_blank" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.youtube.com/@wickedcorerecords" target="_blank" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+
+</body></html>
