@@ -153,19 +153,6 @@
   </div>
 </div>
 
-<div class="auth-box">
-    <?php if (isset($_SESSION['osu_user'])): ?>
-        <img src="<?= $_SESSION['osu_user']['avatar'] ?>" width="40" height="40">
-        <span><?= $_SESSION['osu_user']['username'] ?></span>
-        <a href="/logout.php">Выйти</a>
-    <?php else: ?>
-        <a href="/osu-auth.php" class="osu-login-btn">
-            <img src="https://osu.ppy.sh/images/layout/logo-osu.png" width="20">
-            Войти через osu!
-        </a>
-    <?php endif; ?>
-</div>
-
   <div class="links">
     <a href="https://x.com/kageminori" target="_blank" aria-label="Twitter">
       <i class="fab fa-twitter"></i>
