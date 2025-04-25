@@ -4,7 +4,7 @@
   <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>kageminori</title>
+  <title>kageminori profile</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
@@ -21,37 +21,52 @@
       color: #2c3e50;
     }
 
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
     .links {
-      margin-top: 50px;
+      margin-top: 20px;
       display: flex;
-      gap: 50px;
+      gap: 20px;
       opacity: 0;
       animation: iconsIn 0.7s ease-out forwards;
       animation-delay: 0.7s;
+    }
+
+    .latexlinks {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      opacity: 0;
+      animation: iconsIn 0.7s ease-out forwards;
+      animation-delay: 0.9s;
     }
 
     .latexlinks a {
       color: #2c3e50; 
       font-size: 1rem;
       text-decoration: none;
-      transition: transform 0.2s ease, color 0.2s ease;
+      transition: transform 0.1s ease, color 0.1s ease;
     }
 
     .latexlinks a:hover {
       color: #5ba4a4;
-      transform: scale(2);
+      transform: scale(1.05);
     }
 
     .links a {
       color: #2c3e50;
       font-size: 2rem;
       text-decoration: none;
-      transition: transform 0.2s ease, color 0.2s ease;
+      transition: transform 0.1s ease, color 0.1s ease;
     }
 
     .links a:hover {
       color: #5ba4a4;
-      transform: scale(2);
+      transform: scale(1.2);
     }
 
     .svg-container {
@@ -61,6 +76,12 @@
       margin: 20px 0;
     }
 
+    svg {
+      width: 300px;
+      height: auto;
+      opacity: 0;
+      animation: fadeIn 0.7s ease-in forwards;
+    }
 
     @keyframes fadeIn {
       0% {
@@ -91,67 +112,28 @@
         opacity: 1;
       }
     }
-
-    .soundcloud-player {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 190px;
-      background: white;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px 0;
-      border-top: 1px solid #eee;
-  }
-  
-  .player-container {
-      width: 100%;
-      max-width: 2300px;
-      margin: 0 auto;
-  }
-  
-  iframe {
-      width: 100%;
-      height: 190px;
-      border: none;
-  }
-  
-  /* Адаптация для мобильных */
-  @media (max-width: 768px) {
-      .soundcloud-player {
-          height: 120px;
-      }
-      iframe {
-          height: 120px;
-      }
-      body {
-          padding-bottom: 140px;
-      }
-  }
-  h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 2px;
-}
   </style>
 </head>
 <body>
 
-<div class="soundcloud-player">
-  <div class="player-container">
-    <h1>Most popular SoundCloud upload</h1>
-      <iframe 
-          scrolling="no" 
-          frameborder="no" 
-          allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1322664625&color=%23ff5500">
-      </iframe>
+  <div class="svg-container">
+    <!-- Animated SVG Logo -->
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 199.98 92.31">
+      <defs>
+        <style>
+          .cls-1 {
+            fill: #2c3e50;
+            stroke-width: 0px;
+          }
+        </style>
+      </defs>
+      <rect class="cls-1" x="142.35" y="28.6" width="6.49" height="31.53"/>
+      <polygon class="cls-1" points="152.91 18.8 152.91 60.13 159.41 60.13 159.41 16.91 152.91 18.8"/>
+      <path class="cls-1" d="M137.2,60.13v-31.53h-3.08c2.37-1.9,4.86-3.73,7.46-5.39-.25-.32-.47-.68-.64-1.06-3.08,1.97-6.02,4.17-8.78,6.45h-1.45v1.22c-5.78,4.95-10.72,10.19-14.48,14.38v-15.6h-6.49v19.95c0,1.03.11,1.98.31,2.86-.17.2-.33.4-.5.6-1.8,2.17-3.6,4.31-5.4,6.43v-30.55l-6.49-1.1v3.44c-1.88-1.33-5.01-2.89-8.92-2.89-8.61,0-15.57,7.35-15.57,16.27s6.89,16.35,16.27,16.35c3.52,0,6.65-1.8,8.22-2.97v8.75c-13.4,14.39-28.34,25.55-50.38,25.55-13.77,0-25.51-4.7-33.96-13.46C5.4,69.7,1.02,58.59,1.02,46.54c0-11.43,4.54-22.22,12.76-30.28,1.26-1.23,2.57-2.33,3.93-3.33v47.2h1.02V23.75l25.43,36.38h1.02V12.01h-1.02v36.38L18.8,12.14c7.18-4.88,15.61-6.75,24.86-6.75s18.23,1.49,26.99,4.69c3.76,1.33,7.59,2.74,11.58,3.99-3.37,3.52-6.26,8.06-8.61,13.46,0,0-9.08,21.68-10.25,24.41l-9.94-23.79h-6.49l13.22,31.53-5.63,13.46c-1.1,2.74-3.36,3.91-5.48,3.91-2.35,0-4.69-1.56-5.08-4.38l-3.36,2.11c1.88,3.83,5.71,4.3,7.04,4.3,3.44,0,5.79-1.1,7.82-5.56.08-.31,15.73-37.4,18.62-44.44l.47-1.17c1.72-3.91,4.54-9.15,8.92-13.61,6.89,2.03,13.77,3.37,20.81,3.37,10.33,0,15.88-3.44,15.88-6.73,0-2.66-5.01-6.65-15.88-6.65-8.14,0-15.34,3.05-21.21,8.84v.08c-4.15-1.25-8.14-2.66-12.05-4.15-8.92-3.21-17.92-4.77-27.38-4.77-11.82,0-22.3,3.05-30.67,11.27C4.62,23.77,0,34.8,0,46.54c0,18.39,10.17,35.21,27.38,42.02,6.03,2.51,12.68,3.76,19.87,3.76,22.1,0,36.98-10.81,50.38-24.99v11.66h6.49v-18.87c2.09-2.42,4.18-4.89,6.27-7.39,0,0,.01-.01.02-.02,1.9,5.26,7.5,7.43,13.09,7.43,2.74,0,5.32-.78,7.2-2.11v2.11h6.49ZM89.43,58.87c-5.16,0-9.78-6.97-9.78-15.26s4.54-15.1,10.17-15.1c3.44,0,6.26,2.5,7.82,5.4v19.48c-1.41,2.51-3.91,5.48-8.22,5.48ZM104.3,5.38c10.33,0,14.86,3.68,14.86,5.56,0,2.35-4.62,5.63-14.86,5.63-6.73,0-13.3-1.25-19.95-3.13,4.77-4.54,11.27-8.06,19.95-8.06ZM123.51,59.04c-3.84,0-7.28-2.97-7.28-7.2v-5.78c3.66-4.12,8.61-9.49,14.48-14.6v20.38c0,4.14-3.36,7.2-7.2,7.2Z"/>
+      <path class="cls-1" d="M192.62,26.42c-3.95-5.38-11.06-11.7-22.99-12.68V0s-8.72.5-16.72,14.92l2.12-.82s3.41-3.28,8.11-5.22v4.88c-4.59.43-9.07,1.73-13.37,3.61.22.35.41.72.54,1.12,4.13-1.81,8.43-3.06,12.82-3.48v42.75c-.06.39-.1.77-.1,1.17s.04.78.1,1.15v.06h.01c.76,4.58,5.72,7.79,11.74,7.35,6.54-.48,11.85-5.1,11.85-10.31s-5.3-9.05-11.85-8.57c-1.89.14-3.67.63-5.25,1.38V14.99c21.1,1.8,29.09,20.99,29.1,33.31.01,15.94-10.45,27.8-20.3,30.86-10.66,3.32-19.84.6-25.66-2.26-7.9-3.89-13.5-10.8-15.58-14.8h-1.37s.27.57.27.57c2.77,5.32,9.3,11.98,16.13,15.34,4.05,1.99,9.67,3.92,16.29,3.92,3.22,0,6.67-.46,10.29-1.58,10.27-3.2,21.19-15.51,21.17-32.05,0-5.74-1.94-14.5-7.36-21.89Z"/>
+      <path class="cls-1" d="M142.61,22.55c.7.84,1.75,1.37,2.93,1.37,2.11,0,3.82-1.71,3.82-3.82,0-.39-.06-.76-.17-1.12-.12-.4-.31-.78-.55-1.11-.69-.96-1.82-1.59-3.1-1.59-2.11,0-3.82,1.71-3.82,3.82,0,.49.1.95.26,1.38.15.39.36.75.63,1.07Z"/>
+    </svg>
   </div>
-</div>
 
   <div class="links">
     <a href="https://x.com/kageminori" target="_blank" aria-label="Twitter">
