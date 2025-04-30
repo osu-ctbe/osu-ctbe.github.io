@@ -9,6 +9,23 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
+
+    #osu-login-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #FF66AA;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+  }
+  #osu-login-btn:hover {
+      background: #E05599;
+  }
+
     body {
       margin: 0;
       padding: 0;
@@ -116,6 +133,8 @@
   </style>
 </head>
 <body>
+
+  <a href="/auth/osu" id="osu-login-btn">Login with osu!</a>
 
   <div class="svg-container">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200">
