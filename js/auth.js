@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Парсим access_token из URL (например: https://.../callback.html#access_token=XXX)
-    const hash = window.location.hash.substring(1); // Удаляем #
+
+    const hash = window.location.hash.substring(1); 
     const params = new URLSearchParams(hash);
     const accessToken = params.get('access_token');
     
