@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kageminori profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: #add6ff;
+      color: #2c3e50;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    .links {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      opacity: 0;
+      animation: iconsIn 0.7s ease-out forwards;
+      animation-delay: 0.7s;
+    }
+
+    .latexlinks {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      opacity: 0;
+      animation: iconsIn 0.7s ease-out forwards;
+      animation-delay: 0.9s;
+    }
+
+    .latexlinks a {
+      color: #2c3e50; 
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.1s ease, color 0.1s ease;
+    }
+
+    .latexlinks a:hover {
+      color: #5ba4a4;
+      transform: scale(1.05);
+    }
+
+    .links a {
+      color: #2c3e50;
+      font-size: 2rem;
+      text-decoration: none;
+      transition: transform 0.1s ease, color 0.1s ease;
+    }
+
+    .links a:hover {
+      color: #5ba4a4;
+      transform: scale(1.2);
+    }
+
+    .svg-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    svg {
+      width: 300px;
+      height: auto;
+      opacity: 0;
+      animation: fadeIn 0.7s ease-in forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        filter: blur(20px);
+      }
+      50% {
+        opacity: 0;
+        filter: blur(20px);
+      }
+      100% {
+        opacity: 1;
+        filter: none;
+      }
+    }
+
+    @keyframes iconsIn {
+      0% {
+        transform: translateY(75%);
+        opacity: 0;
+      }
+      50% {
+        transform: translateY(75%);
+        opacity: 0;
+      }
+      100% {
+        transform: none;
+        opacity: 1;
+      }
+    }
+
+    body {
+        -webkit-user-select: none; /* Chrome/Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE/Edge */
+        user-select: none; /* Стандартный синтаксис */
+    }
+    
+    /* Для изображений (чтобы нельзя было перетащить) */
+    img {
+        -webkit-user-drag: none;
+        user-drag: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="svg-container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200">
+      <style>
+        .logo-text {
+          font-family: 'Great Vibes', cursive; /* Можем заменить на любой красивый шрифт */
+          font-size: 128px;
+          fill: #2c3e50;
+        }
+      </style>
+      <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" class="logo-text">
+        Kageminori
+      </text>
+    </svg>
+  </div>
+
+  <div class="links">
+    <a href="https://x.com/kageminori" target="_blank" aria-label="Twitter">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://soundcloud.com/kageminori" target="_blank" aria-label="SoundCloud">
+      <i class="fab fa-soundcloud"></i>
+    </a>
+    <a href="https://open.spotify.com/artist/04sCWKrpBHiJNcOthQEstz" target="_blank" aria-label="Spotify">
+      <i class="fab fa-spotify"></i>
+    </a>
+    <a href="https://github.com/kageminori" target="_blank" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://www.youtube.com/@wickedcorerecords" target="_blank" aria-label="YouTube">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+
+</body>
+
+</html>
