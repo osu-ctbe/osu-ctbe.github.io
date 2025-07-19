@@ -1,17 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login with osu!</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kageminori | Musician</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #5ba4a4;
+      --bg: #add6ff;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--primary);
+      text-align: center;
+    }
+
+    .logo {
+      margin: 20px 0;
+      opacity: 0;
+      animation: fadeIn 0.7s ease-in forwards;
+    }
+
+    .logo-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4.5rem;
+      margin: 0;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .tagline {
+      font-weight: 300;
+      font-size: 1.2rem;
+      margin: 10px 0 30px;
+      opacity: 0;
+      animation: fadeIn 0.7s ease-in forwards 0.3s;
+    }
+
+    .links {
+      display: flex;
+      gap: 25px;
+      margin: 20px 0;
+      opacity: 0;
+      animation: iconsIn 0.7s ease-out forwards 0.7s;
+    }
+
+    .links a {
+      color: var(--primary);
+      font-size: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .links a:hover {
+      color: var(--secondary);
+      transform: scale(1.2);
+    }
+
+    .email {
+      margin: 40px 0 20px;
+      font-size: 1.1rem;
+      opacity: 0;
+      animation: fadeIn 0.7s ease-in forwards 1.1s;
+    }
+
+    .music-player {
+      width: 300px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 15px;
+      margin: 30px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      animation: fadeIn 0.7s ease-in forwards 0.5s;
+    }
+
+    .music-player i {
+      font-size: 2rem;
+      margin-right: 15px;
+      color: var(--primary);
+    }
+
+    .music-player p {
+      font-weight: 600;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes iconsIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Добро пожаловать!</h1>
-        <a href="https://osu.ppy.sh/oauth/authorize?client_id=40240&redirect_uri=https://ctbe.pro/callback.html&response_type=token&scope=identify" class="osu-login-btn">
-            <img src="https://osu.ppy.sh/images/layout/logo-osu.png" width="20"> Login with osu!
-        </a>
-    </div>
+  <div class="logo">
+    <h1 class="logo-text">Kageminori</h1>
+  </div>
+
+  <p class="tagline">Electronic Music Producer</p>
+
+  <div class="music-player">
+    <i class="fas fa-headphones"></i>
+    <p>Now working on new album</p>
+  </div>
+
+  <div class="links">
+    <a href="https://x.com/kageminori" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://soundcloud.com/kageminori" target="_blank" aria-label="SoundCloud"><i class="fab fa-soundcloud"></i></a>
+    <a href="https://open.spotify.com/artist/04sCWKrpBHiJNcOthQEstz" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+    <a href="https://github.com/kageminori" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://www.youtube.com/@wickedcorerecords" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <div class="email">kageminori.qna@gmail.com</div>
 </body>
 </html>
